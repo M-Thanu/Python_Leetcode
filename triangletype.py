@@ -6,9 +6,9 @@ def classify_triangle(points):
     b = ((vl[1][0] - vl[2][0])**2 + (vl[1][1] - vl[2][1])**2)** 0.5
     c = ((vl[0][0] - vl[2][0])**2 + (vl[0][1] - vl[2][1])**2)** 0.5
 
-    A = round(abs(a), 1)
-    B = round(abs(b), 1)
-    C = round(abs(c), 1)
+    A = round(abs(a)) 
+    B = round(abs(b)) 
+    C = round(abs(c)) 
 
     #finding the biggest side
     if A > B:
@@ -21,7 +21,7 @@ def classify_triangle(points):
     else:
         ms = C
 
-    #defining finding biigest and smallest sides
+    #defining finding biggest and smallest sides
     sl = [A, B, C]
     othersides=[]
     for i in sl:
@@ -31,7 +31,7 @@ def classify_triangle(points):
             othersides.append(i)
 
     #implementing the logic
-    if ((ms)**2 > (othersides[0]**2 + othersides[1]**2)):
+    if ((ms)**2 > (othersides[0]**2 + othersides[1]**2)): 
         print("Obtuse")
     elif((ms)**2 == (othersides[0]**2 + othersides[1]**2)):
         print("Right Angled")
